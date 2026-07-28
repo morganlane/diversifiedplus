@@ -171269,3 +171269,241 @@ html body.dp-page-index .section-hero .hero-subtitle {
     font-size: 1.72rem !important;
   }
 }
+
+html body.dp-page-index #site-header.section-nav,
+html body.dp-page-index #site-header.section-nav .container-fluid,
+html body.dp-page-index #site-header.section-nav .col,
+html body.dp-page-index #site-header.section-nav .header-wrapper,
+html body.dp-page-index #site-header.section-nav .links-wrapper,
+html body.dp-page-index #site-header.section-nav .navs-wrapper,
+html body.dp-page-index #site-header.section-nav .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav .cta-wrapper,
+html body.dp-page-index #site-header.section-nav .hamburger-wrapper,
+html body.dp-page-index #site-header.section-nav .logo {
+  transition: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up),
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .container-fluid,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .col,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .header-wrapper,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .links-wrapper,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .navs-wrapper,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .cta-wrapper,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .hamburger-wrapper,
+html body.dp-page-index #site-header.section-nav:not(.dp-nav-scrolled):not(.has-scrolled):not(.scrolling-up) .logo {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .container-fluid,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .col,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .header-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .links-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .navs-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .cta-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .hamburger-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled,
+html body.dp-page-index #site-header.section-nav.has-scrolled .container-fluid,
+html body.dp-page-index #site-header.section-nav.has-scrolled .col,
+html body.dp-page-index #site-header.section-nav.has-scrolled .header-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled .links-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled .navs-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav.has-scrolled .cta-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled .hamburger-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up,
+html body.dp-page-index #site-header.section-nav.scrolling-up .container-fluid,
+html body.dp-page-index #site-header.section-nav.scrolling-up .col,
+html body.dp-page-index #site-header.section-nav.scrolling-up .header-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up .links-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up .navs-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav.scrolling-up .cta-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up .hamburger-wrapper,
+html body.dp-page-index #site-header.section-nav:hover,
+html body.dp-page-index #site-header.section-nav:hover .container-fluid,
+html body.dp-page-index #site-header.section-nav:hover .col,
+html body.dp-page-index #site-header.section-nav:hover .header-wrapper,
+html body.dp-page-index #site-header.section-nav:hover .links-wrapper,
+html body.dp-page-index #site-header.section-nav:hover .navs-wrapper,
+html body.dp-page-index #site-header.section-nav:hover .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav:hover .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav:hover .cta-wrapper,
+html body.dp-page-index #site-header.section-nav:hover .hamburger-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within,
+html body.dp-page-index #site-header.section-nav:focus-within .container-fluid,
+html body.dp-page-index #site-header.section-nav:focus-within .col,
+html body.dp-page-index #site-header.section-nav:focus-within .header-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within .links-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within .navs-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav:focus-within .cta-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within .hamburger-wrapper {
+  background: #fff !important;
+  background-color: #fff !important;
+}
+
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled {
+  background: #fff !important;
+  background-color: #fff !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav .row,
+html body.dp-page-index.dp-nav-scrolled #site-header.section-nav .row,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .row,
+html body.dp-page-index #site-header.section-nav.has-scrolled .row,
+html body.dp-page-index #site-header.section-nav.scrolling-up .row,
+html body.dp-page-index #site-header.section-nav:hover .row,
+html body.dp-page-index #site-header.section-nav:focus-within .row {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav .logo,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .logo,
+html body.dp-page-index #site-header.section-nav.has-scrolled .logo,
+html body.dp-page-index #site-header.section-nav.scrolling-up .logo,
+html body.dp-page-index #site-header.section-nav:hover .logo,
+html body.dp-page-index #site-header.section-nav:focus-within .logo {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav .cta-wrapper {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.btn,
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.btn.btn-primary,
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.dp-phone-cta-final,
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.btn.dp-phone-cta-final,
+html body.dp-page-index.dp-nav-scrolled #site-header.section-nav .cta-wrapper a.btn,
+html body.dp-page-index #site-header.section-nav:hover .cta-wrapper a.btn,
+html body.dp-page-index #site-header.section-nav:focus-within .cta-wrapper a.btn,
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.btn:hover,
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.btn:focus,
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.dp-phone-cta-final:hover,
+html body.dp-page-index #site-header.section-nav .cta-wrapper a.dp-phone-cta-final:focus {
+  background: #0e3043 !important;
+  background-color: #0e3043 !important;
+  border-color: #0e3043 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav a,
+html body.dp-page-index #site-header.section-nav a:visited,
+html body.dp-page-index #site-header.section-nav a:hover,
+html body.dp-page-index #site-header.section-nav a:focus,
+html body.dp-page-index #site-header.section-nav #menu-main-nav > li > a,
+html body.dp-page-index #site-header.section-nav #menu-main-nav > li > a:hover,
+html body.dp-page-index #site-header.section-nav .menu-desktop > li > a,
+html body.dp-page-index #site-header.section-nav .dp-services-mega-trigger,
+html body.dp-page-index #site-header.section-nav .dp-news-mega-trigger,
+html body.dp-page-index #site-header.section-nav .phone,
+html body.dp-page-index #site-header.section-nav .phone span {
+  color: #0e3043 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+html body.dp-page-index #site-header.section-nav .logo img {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body.dp-page-index .section-nav .sm-bugme,
+html body.dp-page-index .section-nav .sm-bugme .container-fluid,
+html body.dp-page-index.dp-nav-scrolled .section-nav .sm-bugme,
+html body.dp-page-index.dp-nav-scrolled .section-nav .sm-bugme .container-fluid,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .sm-bugme,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .sm-bugme .container-fluid,
+html body.dp-page-index #site-header.section-nav.has-scrolled .sm-bugme,
+html body.dp-page-index #site-header.section-nav.has-scrolled .sm-bugme .container-fluid,
+html body.dp-page-index #site-header.section-nav.scrolling-up .sm-bugme,
+html body.dp-page-index #site-header.section-nav.scrolling-up .sm-bugme .container-fluid,
+html body.dp-page-index #site-header.section-nav:hover .sm-bugme,
+html body.dp-page-index #site-header.section-nav:hover .sm-bugme .container-fluid,
+html body.dp-page-index #site-header.section-nav:focus-within .sm-bugme,
+html body.dp-page-index #site-header.section-nav:focus-within .sm-bugme .container-fluid {
+  background: #0e3043 !important;
+  background-color: #0e3043 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+html body.dp-page-index .section-nav .logo,
+html body.dp-page-index .section-nav .logo img,
+html body.dp-page-index .section-nav .main-nav-wrapper,
+html body.dp-page-index .section-nav .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index .section-nav .navs-wrapper,
+html body.dp-page-index .section-nav .links-wrapper,
+html body.dp-page-index .section-nav #menu-main-nav,
+html body.dp-page-index .section-nav .menu-desktop,
+html body.dp-page-index.dp-nav-scrolled .section-nav .logo,
+html body.dp-page-index.dp-nav-scrolled .section-nav .logo img,
+html body.dp-page-index.dp-nav-scrolled .section-nav .main-nav-wrapper,
+html body.dp-page-index.dp-nav-scrolled .section-nav .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index.dp-nav-scrolled .section-nav .navs-wrapper,
+html body.dp-page-index.dp-nav-scrolled .section-nav .links-wrapper,
+html body.dp-page-index.dp-nav-scrolled .section-nav #menu-main-nav,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .logo,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .logo img,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .navs-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .links-wrapper,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled #menu-main-nav,
+html body.dp-page-index #site-header.section-nav.has-scrolled .logo,
+html body.dp-page-index #site-header.section-nav.has-scrolled .logo img,
+html body.dp-page-index #site-header.section-nav.has-scrolled .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav.has-scrolled .navs-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled .links-wrapper,
+html body.dp-page-index #site-header.section-nav.has-scrolled #menu-main-nav,
+html body.dp-page-index #site-header.section-nav.scrolling-up .logo,
+html body.dp-page-index #site-header.section-nav.scrolling-up .logo img,
+html body.dp-page-index #site-header.section-nav.scrolling-up .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav.scrolling-up .navs-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up .links-wrapper,
+html body.dp-page-index #site-header.section-nav.scrolling-up #menu-main-nav,
+html body.dp-page-index #site-header.section-nav:hover .logo,
+html body.dp-page-index #site-header.section-nav:hover .logo img,
+html body.dp-page-index #site-header.section-nav:hover .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav:hover .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav:hover .navs-wrapper,
+html body.dp-page-index #site-header.section-nav:hover .links-wrapper,
+html body.dp-page-index #site-header.section-nav:hover #menu-main-nav,
+html body.dp-page-index #site-header.section-nav:focus-within .logo,
+html body.dp-page-index #site-header.section-nav:focus-within .logo img,
+html body.dp-page-index #site-header.section-nav:focus-within .main-nav-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-page-index #site-header.section-nav:focus-within .navs-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within .links-wrapper,
+html body.dp-page-index #site-header.section-nav:focus-within #menu-main-nav {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
