@@ -171903,3 +171903,131 @@ html body.dp-non-home-page #site-header.section-nav.scrolling-up .sm-bugme * {
   color: #fff !important;
   text-shadow: none !important;
 }
+
+html body.dp-non-home-page .section-nav,
+html body.dp-non-home-page #site-header.section-nav,
+html body.dp-non-home-page .section-nav .container-fluid,
+html body.dp-non-home-page .section-nav .row,
+html body.dp-non-home-page .section-nav .col,
+html body.dp-non-home-page .section-nav .header-wrapper,
+html body.dp-non-home-page .section-nav .links-wrapper,
+html body.dp-non-home-page .section-nav .navs-wrapper,
+html body.dp-non-home-page .section-nav .main-nav-wrapper,
+html body.dp-non-home-page .section-nav .main-nav-wrapper.d-none.d-xl-flex,
+html body.dp-non-home-page .section-nav #menu-main-nav,
+html body.dp-non-home-page .section-nav .menu-desktop {
+  overflow: visible !important;
+}
+
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-news-mega-parent,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent {
+  position: relative !important;
+}
+
+html body.dp-non-home-page .section-nav .dp-services-mega-menu,
+html body.dp-non-home-page .section-nav .dp-news-mega-menu {
+  z-index: 10080 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent:hover > .dp-services-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent:focus-within > .dp-services-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent.dp-mega-open > .dp-services-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent.dp-mega-active > .dp-services-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent:hover > .dp-services-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent:focus-within > .dp-services-mega-menu,
+html body.dp-non-home-page .section-nav .dp-services-mega-menu:hover,
+html body.dp-non-home-page .section-nav .dp-services-mega-menu:focus-within {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-news-mega-parent:hover > .dp-news-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-news-mega-parent:focus-within > .dp-news-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-news-mega-parent.dp-news-open > .dp-news-mega-menu,
+html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-news-mega-parent.dp-mega-open > .dp-news-mega-menu,
+html body.dp-non-home-page .section-nav #menu-item-dp-news:hover > .dp-news-mega-menu,
+html body.dp-non-home-page .section-nav #menu-item-dp-news:focus-within > .dp-news-mega-menu,
+html body.dp-non-home-page .section-nav .dp-news-mega-menu:hover,
+html body.dp-non-home-page .section-nav .dp-news-mega-menu:focus-within {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+html body.dp-non-home-page .dpco-services-hero .dpco-hero__inner {
+  background:
+    linear-gradient(135deg, rgba(14,48,67,.96), rgba(14,48,67,.84)),
+    url("assets/images/diversified-plus-projects/exterior_renovations/home-renovation-photo-westchester-putnam-southern-connecticut-01.png")
+    center/cover no-repeat;
+}
+
+@media (min-width: 1200px) {
+  html body.dp-non-home-page .section-nav .navs-wrapper,
+  html body.dp-non-home-page .section-nav .main-nav-wrapper,
+  html body.dp-non-home-page .section-nav #menu-main-nav,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent {
+    overflow: visible !important;
+  }
+
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent {
+    position: relative !important;
+  }
+
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent > .dp-services-mega-menu {
+    position: fixed !important;
+    top: 132px !important;
+    left: 50vw !important;
+    right: auto !important;
+    width: min(1060px, calc(100vw - 64px)) !important;
+    max-width: calc(100vw - 64px) !important;
+    margin: 0 !important;
+    padding-top: 14px !important;
+    transform: translateX(-50%) translateY(10px) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: 10090 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent:hover > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent:focus-within > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent.dp-mega-open > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent.dp-mega-active > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent:hover > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent:focus-within > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent.dp-mega-open > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent.dp-mega-active > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav .dp-services-mega-menu:hover,
+  html body.dp-non-home-page .section-nav .dp-services-mega-menu:focus-within {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(-50%) translateY(0) !important;
+  }
+
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.megaparent:not(:hover):not(:focus-within):not(.dp-mega-open):not(.dp-mega-active) > .dp-services-mega-menu,
+  html body.dp-non-home-page .section-nav #menu-main-nav > li.dp-services-mega-parent:not(:hover):not(:focus-within):not(.dp-mega-open):not(.dp-mega-active) > .dp-services-mega-menu {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  html body.dp-non-home-page .section-nav .dp-services-mega-shell,
+  html body.dp-non-home-page .section-nav .dp-services-mega-grid,
+  html body.dp-non-home-page .section-nav .dp-services-mega-card,
+  html body.dp-non-home-page .section-nav .dp-services-mega-card-body {
+    overflow: visible !important;
+  }
+}
