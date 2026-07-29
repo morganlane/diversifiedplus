@@ -159799,6 +159799,7 @@ body.dp-non-home-page .dp-scarsdale-project .dp-case-image-card {
   margin: 0;
   overflow: hidden;
   background: #0e3043;
+  border-top: 5px solid #b8bec3;
   box-shadow: 0 24px 80px rgba(14,48,67,.20);
 }
 
@@ -169114,7 +169115,7 @@ html body.dp-non-home-page .dp-case-insight-link * {
 }
 
 html body.dp-non-home-page .dp-case-info-band {
-  background: #eef1f2;
+  background: #f5f5f5;
   color: #0e3043;
   border: 0;
   box-shadow: none;
@@ -170427,7 +170428,7 @@ html body.dp-non-home-page.dp-service-page .dp-case-hero-media {
   display: block;
   opacity: 1;
   visibility: visible;
-  background-image: linear-gradient(90deg,rgba(14,48,67,.82),rgba(14,48,67,.64)),initial;
+  background-image: linear-gradient(90deg,rgba(14,48,67,.96),rgba(14,48,67,.88)),initial;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -170444,7 +170445,7 @@ html body.dp-non-home-page.dp-service-page .dp-kitchen-modern-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(14,48,67,.56);
+  background: rgba(14,48,67,.72);
   pointer-events: none;
   z-index: 1;
 }
@@ -170454,7 +170455,7 @@ html body.dp-non-home-page.dp-service-page .dp-hero__inner::after {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: rgba(14,48,67,.56);
+  background: rgba(14,48,67,.72);
   z-index: 1;
 }
 
@@ -172321,6 +172322,90 @@ html body.dp-page-news .rb-news-container {
   max-width: 87.5rem !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+html body.dp-page-news .rb-news-featured {
+  background: #f5f5f5 !important;
+}
+
+html body.dp-page-news .rb-news-featured-main {
+  background: #0e3043 !important;
+}
+
+html body.dp-page-news .rb-news-featured-image,
+html body.dp-page-news .rb-news-card-image {
+  position: relative !important;
+  isolation: isolate !important;
+}
+
+html body.dp-page-news .rb-news-featured-image::after,
+html body.dp-page-news .rb-news-card-image::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(14,48,67,.18) !important;
+  pointer-events: none !important;
+}
+
+html body.dp-page-news .rb-news-featured-copy p {
+  color: #fdfeff !important;
+}
+
+html body.dp-page-news .rb-news-archive-head {
+  align-items: start !important;
+}
+
+html body.dp-page-news .rb-news-archive-head .rb-news-categories {
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+}
+
+html body.dp-page-news .rb-news-card p,
+html body.dp-page-news .rb-news-card h3 a,
+html body.dp-page-news .rb-news-read,
+html body.dp-page-news .rb-news-card .rb-news-read {
+  color: #fff !important;
+}
+
+html body.dp-page-news .rb-news-card {
+  background: #0e3043 !important;
+}
+
+html body.dp-page-news .rb-news-tab {
+  background: #f5f5f5 !important;
+}
+
+html body.dp-page-news .rb-news-tab.is-active {
+  background: #0e3043 !important;
+  color: #D8DEE2 !important;
+}
+
+html body.dp-project-template-page .dp-case-info-band,
+html body.dp-non-home-page.dp-project-template-page .dp-case-info-band,
+html body.dp-non-home-page .dp-case-page .dp-case-info-band,
+html body.dp-non-home-page .dp-scarsdale-project .dp-case-info-band {
+  background: #f5f5f5 !important;
+  background-color: #f5f5f5 !important;
+  background-image: none !important;
+}
+
+html body.dp-non-home-page .dp-scarsdale-project .dp-case-info-band div {
+  background: #f5f5f5 !important;
+  background-color: #f5f5f5 !important;
+}
+
+html body h1#dp-case-title,
+html body .dp-case-hero-title#dp-case-title,
+html body .dp-case-hero .dp-case-hero-title {
+  font-weight: 900 !important;
+}
+
+html body.dp-page-project-white-plains-kitchen-remodel #project-white-plains-kitchen-remodel-case .dp-case-hero-media {
+  background:
+    linear-gradient(rgba(14,48,67,.96), rgba(14,48,67,.96)),
+    url("../images/diversified-plus-projects/kitchens/kit-1.jpg") center / cover no-repeat !important;
+  background-color: #0e3043 !important;
+  background-blend-mode: normal !important;
 }
 
 @media (max-width: 767px) {
