@@ -3088,6 +3088,38 @@ try {
   window.addEventListener('load', fixServicesLinks);
 })();
 
+/* FINAL USER PATCH — force desktop Services and News top-level clicks to navigate */
+(function(){
+  function normalizeTopLinks(){
+    var services = document.querySelector('#menu-main-nav > li.dp-services-mega-parent > a.dp-services-mega-trigger');
+    var news = document.querySelector('#menu-main-nav > li.dp-news-mega-parent > a.dp-news-mega-trigger');
+    if(services){
+      services.setAttribute('href', 'services.html');
+      services.dataset.serviceLink = 'services.html';
+    }
+    if(news){
+      news.setAttribute('href', 'news.html');
+    }
+  }
+
+  document.addEventListener('click', function(event){
+    var trigger = event.target.closest('#menu-main-nav > li.dp-services-mega-parent > a.dp-services-mega-trigger, #menu-main-nav > li.dp-news-mega-parent > a.dp-news-mega-trigger');
+    if(!trigger) return;
+    if(event.defaultPrevented) event.stopImmediatePropagation();
+    if(event.button !== 0) return;
+    if(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    var href = trigger.getAttribute('href');
+    if(!href) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    window.location.href = href;
+  }, true);
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', normalizeTopLinks);
+  else normalizeTopLinks();
+  window.addEventListener('load', normalizeTopLinks);
+})();
+
 
 // === DP KITCHEN MODERN PAGE JS ===
 (function(){
@@ -3145,4 +3177,233 @@ try {
   }else{
     initKitchenBeforeAfter();
   }
+})();
+
+/* FINAL USER PATCH — rebuild active mobile drawer from real nav and keep labels/links in sync */
+(function(){
+  var MOBILE_MAX = 1199;
+
+  function isMobile(){
+    return window.matchMedia('(max-width:' + MOBILE_MAX + 'px)').matches;
+  }
+
+  function qs(sel, root){ return (root || document).querySelector(sel); }
+  function qsa(sel, root){ return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+  function esc(value){
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function getMenuSource(){
+    return qs('#mmenu .dp-mobile-main-list') || qs('#mmenu .mm-listview') || qs('#menu-main-nav');
+  }
+
+  function parseList(list){
+    return qsa(':scope > li', list).map(function(item){
+      var link = qs(':scope > a', item);
+      if(!link) return null;
+      var childList = qs(':scope > ul', item);
+      return {
+        label: (link.textContent || '').replace(/\s+/g, ' ').trim(),
+        href: link.getAttribute('href') || '#',
+        children: childList ? parseList(childList) : []
+      };
+    }).filter(Boolean);
+  }
+
+  function buildItems(items, level){
+    return items.map(function(item, index){
+      if(item.children && item.children.length){
+        var id = 'rb-mobile-final-submenu-' + level + '-' + index + '-' + item.label.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        return '' +
+          '<div class="rb-mobile-item rb-has-submenu dp-mobile-final-item dp-mobile-final-item--has-submenu">' +
+            '<button class="rb-mobile-submenu-toggle dp-mobile-final-toggle" type="button" aria-expanded="false" aria-controls="' + esc(id) + '">' + esc(item.label) + '</button>' +
+            '<div class="rb-mobile-submenu dp-mobile-final-submenu" id="' + esc(id) + '" hidden>' + buildItems(item.children, level + 1) + '</div>' +
+          '</div>';
+      }
+      return '<a class="rb-mobile-link dp-mobile-final-link" href="' + esc(item.href) + '">' + esc(item.label) + '</a>';
+    }).join('');
+  }
+
+  function buildDrawerMarkup(){
+    var items = parseList(getMenuSource());
+    if(!items.length){
+      items = [
+        { label: 'Services', href: 'services.html', children: [] },
+        { label: 'Company', href: 'about.html', children: [] },
+        { label: 'Projects', href: 'projects.html', children: [] },
+        { label: 'News', href: 'news.html', children: [] },
+        { label: 'Contact', href: 'contact.html', children: [] }
+      ];
+    }
+
+    return '' +
+      '<div class="rb-mobile-drawer__head dp-mobile-final-head">' +
+        '<span class="rb-mobile-drawer__brand dp-mobile-final-brand">Diversified Plus Construction</span>' +
+        '<button class="rb-mobile-drawer__close dp-mobile-final-close" type="button" aria-label="Close mobile menu">×</button>' +
+      '</div>' +
+      '<nav class="rb-mobile-drawer__nav dp-mobile-final-nav" aria-label="Mobile navigation">' + buildItems(items, 0) + '</nav>' +
+      '<div class="rb-mobile-drawer__cta dp-mobile-final-cta"><a class="dp-mobile-final-cta-link" href="tel:9148790442">Call 914.879.0442</a></div>';
+  }
+
+  function wireDrawer(drawer){
+    var close = function(){
+      document.body.classList.remove('rb-mobile-menu-open');
+      drawer.setAttribute('aria-hidden', 'true');
+      var button = qs('.rb-mobile-hamburger');
+      if(button){
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-label', 'Open mobile menu');
+      }
+    };
+
+    var closeBtn = qs('.rb-mobile-drawer__close', drawer);
+    if(closeBtn) closeBtn.onclick = close;
+
+    qsa('.rb-mobile-submenu-toggle', drawer).forEach(function(btn){
+      btn.onclick = function(){
+        var panel = document.getElementById(btn.getAttribute('aria-controls'));
+        var willOpen = btn.getAttribute('aria-expanded') !== 'true';
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        if(panel){
+          panel.hidden = !willOpen;
+          panel.classList.toggle('is-open', willOpen);
+        }
+      };
+    });
+
+    qsa('a', drawer).forEach(function(link){
+      link.onclick = function(){
+        close();
+      };
+    });
+  }
+
+  function applyFinalDrawerTheme(drawer){
+    if(!drawer) return;
+    drawer.style.background = '#0e3043';
+    drawer.style.color = '#FFFFFF';
+    drawer.style.borderLeft = '1px solid rgba(255,255,255,.1)';
+    drawer.style.boxShadow = '-24px 0 60px rgba(0,0,0,.34)';
+
+    var head = qs('.dp-mobile-final-head', drawer);
+    if(head){
+      head.style.background = '#13384c';
+      head.style.borderBottom = '1px solid rgba(255,255,255,.12)';
+    }
+
+    qsa('.dp-mobile-final-brand', drawer).forEach(function(el){
+      el.style.color = '#FFFFFF';
+    });
+
+    qsa('.dp-mobile-final-close', drawer).forEach(function(el){
+      el.style.background = 'transparent';
+      el.style.color = '#FFFFFF';
+      el.style.border = '1px solid rgba(255,255,255,.24)';
+    });
+
+    qsa('.dp-mobile-final-nav', drawer).forEach(function(el){
+      el.style.padding = '10px 24px 4px';
+      el.style.background = 'transparent';
+    });
+
+    qsa('.dp-mobile-final-link, .dp-mobile-final-toggle', drawer).forEach(function(el){
+      el.style.display = 'flex';
+      el.style.alignItems = 'center';
+      el.style.justifyContent = 'space-between';
+      el.style.width = '100%';
+      el.style.minHeight = '56px';
+      el.style.margin = '0';
+      el.style.padding = '0';
+      el.style.background = 'transparent';
+      el.style.color = '#FFFFFF';
+      el.style.border = '0';
+      el.style.borderBottom = '1px solid rgba(255,255,255,.10)';
+      el.style.borderRadius = '0';
+      el.style.boxShadow = 'none';
+      el.style.fontSize = '1rem';
+      el.style.lineHeight = '1.35';
+      el.style.fontWeight = '800';
+      el.style.letterSpacing = '.04em';
+      el.style.textTransform = 'uppercase';
+      el.style.textAlign = 'left';
+      el.style.textDecoration = 'none';
+      el.style.opacity = '1';
+    });
+
+    qsa('.dp-mobile-final-submenu', drawer).forEach(function(el){
+      el.style.margin = '0 0 10px';
+      el.style.padding = '8px 0 4px 16px';
+      el.style.background = 'rgba(255,255,255,.05)';
+      el.style.border = '0';
+      el.style.borderLeft = '1px solid rgba(255,255,255,.12)';
+    });
+
+    qsa('.dp-mobile-final-submenu .dp-mobile-final-link, .dp-mobile-final-submenu a', drawer).forEach(function(el){
+      el.style.display = 'block';
+      el.style.minHeight = '0';
+      el.style.margin = '0';
+      el.style.padding = '11px 0';
+      el.style.background = 'transparent';
+      el.style.color = 'rgba(255,255,255,.84)';
+      el.style.border = '0';
+      el.style.boxShadow = 'none';
+      el.style.fontSize = '.95rem';
+      el.style.lineHeight = '1.45';
+      el.style.fontWeight = '650';
+      el.style.letterSpacing = '.02em';
+      el.style.textTransform = 'none';
+      el.style.textDecoration = 'none';
+    });
+
+    qsa('.dp-mobile-final-cta', drawer).forEach(function(el){
+      el.style.padding = '20px 24px 28px';
+    });
+
+    qsa('.dp-mobile-final-cta-link', drawer).forEach(function(el){
+      el.style.display = 'flex';
+      el.style.alignItems = 'center';
+      el.style.justifyContent = 'center';
+      el.style.minHeight = '48px';
+      el.style.width = '100%';
+      el.style.margin = '0';
+      el.style.padding = '0 18px';
+      el.style.background = '#FFFFFF';
+      el.style.color = '#0e3043';
+      el.style.border = '1px solid #FFFFFF';
+      el.style.borderRadius = '0';
+      el.style.boxShadow = 'none';
+      el.style.fontSize = '.82rem';
+      el.style.lineHeight = '1';
+      el.style.fontWeight = '900';
+      el.style.letterSpacing = '.08em';
+      el.style.textTransform = 'uppercase';
+      el.style.textDecoration = 'none';
+    });
+  }
+
+  function rebuildActiveDrawer(){
+    if(!isMobile()) return;
+    var drawer = qs('.rb-mobile-drawer');
+    if(!drawer) return;
+    drawer.classList.add('dp-mobile-final-drawer');
+    drawer.innerHTML = buildDrawerMarkup();
+    drawer.setAttribute('aria-hidden', document.body.classList.contains('rb-mobile-menu-open') ? 'false' : 'true');
+    wireDrawer(drawer);
+    applyFinalDrawerTheme(drawer);
+  }
+
+  function init(){
+    rebuildActiveDrawer();
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+  window.addEventListener('load', init);
+  window.addEventListener('resize', function(){
+    if(isMobile()) rebuildActiveDrawer();
+  });
 })();
