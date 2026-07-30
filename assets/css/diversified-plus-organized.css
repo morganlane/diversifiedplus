@@ -173163,3 +173163,203 @@ html body.dp-non-home-page .dp-scarsdale-project .dp-case-tab-panel .dp-case-sli
     text-decoration: none !important;
   }
 }
+
+/* FINAL 2026-07-30 - homepage hero and selector sizing */
+html body.dp-page-index .section-nav .sm-bugme a,
+html body.dp-page-index .section-nav .sm-bugme a:visited,
+html body.dp-page-index .section-nav:hover .sm-bugme a,
+html body.dp-page-index .section-nav:focus-within .sm-bugme a,
+html body.dp-page-index.dp-nav-scrolled .section-nav .sm-bugme a,
+html body.dp-page-index #site-header.section-nav .sm-bugme a,
+html body.dp-page-index #site-header.section-nav.dp-nav-scrolled .sm-bugme a,
+html body.dp-page-index #site-header.section-nav.has-scrolled .sm-bugme a,
+html body.dp-page-index #site-header.section-nav.scrolling-up .sm-bugme a {
+  color: #FFFFFF !important;
+}
+
+html body.dp-page-index .section-hero .hero-title,
+html body.dp-page-index .section-hero h1 {
+  font-size: clamp(2.2rem, 3.8vw, 3.15rem) !important;
+  line-height: 1.08 !important;
+  min-height: 4.95em !important;
+}
+
+html body.dp-page-index .section-hero .form-box .dp-hero-quote-heading,
+html body.dp-page-index .section-hero .dp-hero-quote-heading {
+  font-size: 1.48rem !important;
+  line-height: 1.2 !important;
+}
+
+html body.dp-page-index .section-hero .form-box .dp-hero-quote-subtext,
+html body.dp-page-index .section-hero .dp-hero-quote-subtext {
+  font-size: .92rem !important;
+  line-height: 1.45 !important;
+}
+
+html body.dp-page-index .content-wrapper h1,
+html body.dp-page-index .section-home-intro .content-wrapper h1,
+html body.dp-page-index .section-home-intro h1.text-uppercase {
+  font-size: clamp(1.95rem, 3vw, 2.55rem) !important;
+  line-height: 1.14 !important;
+}
+
+html body.dp-page-index .wrapper-section-prod-selector .prod-selector-super-header {
+  font-size: .72rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: .12em !important;
+}
+
+html body.dp-page-index .wrapper-section-prod-selector .prod-selector-header {
+  font-size: clamp(1.35rem, 1.95vw, 1.72rem) !important;
+  line-height: 1.14 !important;
+}
+
+html body.dp-page-index .wrapper-section-prod-selector .prod-selector-text,
+html body.dp-page-index .wrapper-section-prod-selector .prod-selector-text p {
+  font-size: .86rem !important;
+  line-height: 1.48 !important;
+}
+
+html body.dp-page-index .dp-product-logos-band,
+html body.dp-page-index .dp-product-logos-band.bg-gray {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+}
+
+html body .mm-page,
+html body.dp-page-index .mm-page {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+}
+
+html body.dp-page-index .dp-product-logos-inner .dp-product-logos-eyebrow,
+html body.dp-page-index .dp-product-logos-inner #dp-product-logos-title,
+html body.dp-page-index .dp-product-logos-inner .dp-product-logos-copy {
+  color: #0e3043 !important;
+}
+
+html body.dp-page-index .dp-product-logos-inner .dp-product-logos-eyebrow {
+  width: 100% !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-panel {
+  background: #0e3043 !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-copy h3 {
+  font-size: clamp(2rem, 2.8vw, 2.6rem) !important;
+  line-height: 1.08 !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-copy p {
+  padding-right: 18px !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-button {
+  background: #FFFFFF !important;
+  color: #0e3043 !important;
+  border-color: #FFFFFF !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-button:hover,
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-button:focus-visible {
+  background: #EEF1F2 !important;
+  color: #0e3043 !important;
+  border-color: #EEF1F2 !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-nav {
+  position: relative !important;
+  z-index: 5 !important;
+  background: transparent !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-arrow,
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-dots,
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-dot {
+  position: relative !important;
+  z-index: 6 !important;
+}
+
+html body.dp-page-index #why-choose.rbwc3 .rbwc3-dots {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .header-content {
+  display: grid !important;
+  gap: 28px !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-intro {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr) !important;
+  gap: clamp(28px, 4vw, 72px) !important;
+  align-items: end !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-copy {
+  max-width: 760px !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 0 0 22px !important;
+  color: #c8d1d6 !important;
+  font-size: .8rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .24em !important;
+  text-transform: uppercase !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-eyebrow::before {
+  content: "" !important;
+  display: block !important;
+  width: 28px !important;
+  height: 2px !important;
+  background: #d7dde1 !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-title {
+  margin: 0 !important;
+  color: #12374a !important;
+  font-size: clamp(2.2rem, 4.7vw, 4.15rem) !important;
+  line-height: .94 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 800 !important;
+  max-width: 820px !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-text {
+  margin: 0 !important;
+  max-width: 520px !important;
+  align-self: center !important;
+  color: #48697b !important;
+  font-size: 1.02rem !important;
+  line-height: 1.7 !important;
+  font-weight: 500 !important;
+}
+
+html body.dp-page-index .section-gallery.gallery-tabs .gallery-nav {
+  margin-top: 4px !important;
+}
+
+@media (max-width: 900px) {
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-intro {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-title {
+    font-size: clamp(2rem, 8vw, 3.2rem) !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-text {
+    max-width: none !important;
+  }
+}
