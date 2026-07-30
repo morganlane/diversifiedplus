@@ -3075,13 +3075,16 @@ try {
 /* FINAL USER PATCH — keep desktop Services menu item linked to services.html */
 (function(){
   function fixServicesLinks(){
-    document.querySelectorAll('#menu-main-nav.menu-desktop > li > a, #menu-main-nav > li > a, .main-nav-wrapper a, .links-wrapper a').forEach(function(a){
-      var label=(a.textContent||'').trim().toLowerCase();
-      if(label==='service' || label==='services' || a.classList.contains('dp-services-mega-trigger')){
-        a.setAttribute('href','services.html');
-        a.dataset.serviceLink='services.html';
-      }
-    });
+    var services = document.querySelector('#menu-main-nav > li.dp-services-mega-parent:first-child > a.dp-services-mega-trigger');
+    var projects = document.querySelector('#menu-main-nav > li.dp-services-mega-parent:nth-of-type(3) > a.dp-services-mega-trigger');
+    if(services){
+      services.setAttribute('href','services.html');
+      services.dataset.serviceLink='services.html';
+    }
+    if(projects){
+      projects.setAttribute('href','projects.html');
+      projects.dataset.serviceLink='projects.html';
+    }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', fixServicesLinks);
   else fixServicesLinks();
@@ -3090,34 +3093,41 @@ try {
 
 /* FINAL USER PATCH — force desktop Services and News top-level clicks to navigate */
 (function(){
-  function normalizeTopLinks(){
+  function wireTopLevelNav(){
     var services = document.querySelector('#menu-main-nav > li.dp-services-mega-parent > a.dp-services-mega-trigger');
+    var projects = document.querySelectorAll('#menu-main-nav > li.dp-services-mega-parent > a.dp-services-mega-trigger')[1];
     var news = document.querySelector('#menu-main-nav > li.dp-news-mega-parent > a.dp-news-mega-trigger');
-    if(services){
-      services.setAttribute('href', 'services.html');
-      services.dataset.serviceLink = 'services.html';
-    }
-    if(news){
-      news.setAttribute('href', 'news.html');
-    }
+
+    [
+      [services, 'services.html'],
+      [projects, 'projects.html'],
+      [news, 'news.html']
+    ].forEach(function(pair){
+      var link = pair[0];
+      var href = pair[1];
+      if(!link) return;
+
+      link.setAttribute('href', href);
+      if(link.classList.contains('dp-services-mega-trigger')){
+        link.dataset.serviceLink = href;
+      }
+
+      if(link.dataset.dpDirectNavBound === 'true') return;
+      link.dataset.dpDirectNavBound = 'true';
+
+      link.addEventListener('click', function(event){
+        if(event.button !== 0) return;
+        if(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        event.stopPropagation();
+        window.location.assign(href);
+      });
+    });
   }
 
-  document.addEventListener('click', function(event){
-    var trigger = event.target.closest('#menu-main-nav > li.dp-services-mega-parent > a.dp-services-mega-trigger, #menu-main-nav > li.dp-news-mega-parent > a.dp-news-mega-trigger');
-    if(!trigger) return;
-    if(event.defaultPrevented) event.stopImmediatePropagation();
-    if(event.button !== 0) return;
-    if(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    var href = trigger.getAttribute('href');
-    if(!href) return;
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    window.location.href = href;
-  }, true);
-
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', normalizeTopLinks);
-  else normalizeTopLinks();
-  window.addEventListener('load', normalizeTopLinks);
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wireTopLevelNav);
+  else wireTopLevelNav();
+  window.addEventListener('load', wireTopLevelNav);
 })();
 
 

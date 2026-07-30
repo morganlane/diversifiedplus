@@ -1,6 +1,40 @@
 
 /* FINAL USER PATCH — one-open-mega + smoother hover close */
 (function(){
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function(){
+      document.documentElement.classList.add('dp-perf-idle');
+    }, { timeout: 1200 });
+  } else {
+    window.setTimeout(function(){
+      document.documentElement.classList.add('dp-perf-idle');
+    }, 700);
+  }
+
+  if ('IntersectionObserver' in window) {
+    var bgNodes = document.querySelectorAll('[data-bg]');
+    var bgObserver = new IntersectionObserver(function(entries, observer){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var bg = el.getAttribute('data-bg');
+        if (bg && !el.style.backgroundImage) {
+          el.style.backgroundImage = 'url(\"' + bg + '\")';
+        }
+        observer.unobserve(el);
+      });
+    }, { rootMargin: '300px 0px' });
+    bgNodes.forEach(function(node){ bgObserver.observe(node); });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var imgs = document.querySelectorAll('img:not([loading])');
+    imgs.forEach(function(img, index){
+      if (index > 2) img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+    });
+  });
+
   const nav=document.querySelector('#menu-main-nav');
   if(!nav) return;
   const parents=[...nav.querySelectorAll('.megaparent')];
@@ -69,4 +103,3 @@
   document.addEventListener('pointerover', function(event){ if(!nav.contains(event.target)) closeAll(null); });
   document.addEventListener('keydown', function(event){ if(event.key === 'Escape') closeAll(null); });
 })();
-
