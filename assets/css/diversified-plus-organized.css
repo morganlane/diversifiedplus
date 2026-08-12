@@ -174483,6 +174483,177 @@ html body.dp-page-index .section-gallery.gallery-tabs .gallery-nav ul li a.searc
   color: #12374a !important;
 }
 
+/* FINAL 2026-08-11 - home hero/tablet cleanup + cohesive mobile gallery */
+@media (max-width: 1199px) {
+  html body.dp-page-index .section-hero .anchor-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body.dp-page-index .section-gallery.gallery-tabs .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .row.justify-content-center {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .row.justify-content-center > .col-10 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .header-content {
+    margin-bottom: 20px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-intro {
+    gap: 14px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-copy {
+    margin-bottom: 0 !important;
+    transform: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-eyebrow {
+    margin-bottom: 16px !important;
+    justify-content: flex-start !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-title {
+    font-size: clamp(2rem, 9vw, 2.8rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .dp-gallery-head-text {
+    font-size: .95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none {
+    display: block !important;
+    margin-top: 0 !important;
+    margin-bottom: 22px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .toggle-dropdown {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-height: 52px !important;
+    padding: 0 18px !important;
+    background: #12374a !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: .12em !important;
+    font-size: .8rem !important;
+    font-weight: 800 !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .menu-dropdown {
+    margin-top: 10px !important;
+    padding: 10px !important;
+    background: #f6f8f9 !important;
+    border: 1px solid #e2e8eb !important;
+    box-shadow: none !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .menu-dropdown ul {
+    display: grid !important;
+    gap: 8px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .menu-dropdown ul li {
+    margin: 0 !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .menu-dropdown ul li a {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 46px !important;
+    padding: 0 14px !important;
+    background: #ffffff !important;
+    color: #12374a !important;
+    border: 1px solid #e2e8eb !important;
+    font-size: .8rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .1em !important;
+    text-transform: uppercase !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .menu-dropdown ul li a.active,
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .menu-dropdown ul li a.show,
+  html body.dp-page-index .section-gallery.gallery-tabs .rb-dropdown.dark.d-md-none .menu-dropdown ul li a.dp-filter-active {
+    background: #12374a !important;
+    border-color: #12374a !important;
+    color: #ffffff !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content {
+    margin-top: 0 !important;
+    margin-bottom: 32px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content > .tab-content > .tab-pane > .row {
+    margin-left: -6px !important;
+    margin-right: -6px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content > .tab-content > .tab-pane > .row > .col-6,
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content > .tab-content > .tab-pane > .row > .col-12 {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content .col-6 .row {
+    margin-left: -6px !important;
+    margin-right: -6px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content .col-6 .col-12,
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content .col-6 .col-lg-6 {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    margin-bottom: 12px !important;
+    height: auto !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content a.custom-lightbox {
+    display: block !important;
+    min-height: 188px !important;
+    height: 188px !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content .col-6:first-child .col-12:first-child a.custom-lightbox {
+    min-height: 244px !important;
+    height: 244px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content a.custom-lightbox .overlay {
+    padding: 14px !important;
+  }
+
+  html body.dp-page-index .section-gallery.gallery-tabs .gallery-content a.custom-lightbox .overlay span {
+    font-size: .72rem !important;
+    letter-spacing: .08em !important;
+  }
+}
+
 body.dp-page-projects .rb-project-card::before {
   background: linear-gradient(180deg, rgba(14,48,67,.48) 0%, rgba(14,48,67,.72) 40%, rgba(14,48,67,.96) 100%) !important;
   opacity: 1 !important;
