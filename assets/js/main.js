@@ -52,7 +52,7 @@ try {
   $$('[data-bg]').forEach(function(el){var bg=el.getAttribute('data-bg');if(bg&&!el.style.backgroundImage){el.style.backgroundImage='url("'+bg+'")'}});
 
   /* JS 05 — Form fallback */
-  $$('form').forEach(function(form){form.addEventListener('submit',function(e){e.preventDefault();var fields=$$('input,select,textarea',form).filter(function(f){var t=(f.type||'').toLowerCase();return!f.disabled&&t!=='hidden'&&t!=='submit'&&t!=='button'});var has=fields.some(function(f){return String(f.value||'').trim().length>0});var msg=$('.dp-form-message',form);if(!msg){msg=document.createElement('div');msg.className='dp-form-message';form.appendChild(msg)}if(!has){msg.classList.add('dp-error');msg.textContent='Please add at least one contact detail before submitting.';return}msg.classList.remove('dp-error');msg.textContent='Preparing your email request...';var body=['New website consultation request',''];fields.forEach(function(f){var v=String(f.value||'').trim();if(v){body.push((f.placeholder||f.name||'Field')+': '+v)}});window.location.href='mailto:jack@diversifiedplus.com?subject='+encodeURIComponent('New project request')+'&body='+encodeURIComponent(body.join('\n'))})});
+  $$('form').forEach(function(form){form.addEventListener('submit',function(e){e.preventDefault();var fields=$$('input,select,textarea',form).filter(function(f){var t=(f.type||'').toLowerCase();return!f.disabled&&t!=='hidden'&&t!=='submit'&&t!=='button'});var has=fields.some(function(f){return String(f.value||'').trim().length>0});var msg=$('.dp-form-message',form);if(!msg){msg=document.createElement('div');msg.className='dp-form-message';form.appendChild(msg)}if(!has){msg.classList.add('dp-error');msg.textContent='Please add at least one contact detail before submitting.';if(fields[0]){fields[0].focus()}return}msg.classList.remove('dp-error');msg.textContent='Preparing your email request…';var body=['New website consultation request',''];fields.forEach(function(f){var v=String(f.value||'').trim();if(v){body.push((f.placeholder||f.name||'Field')+': '+v)}});window.location.href='mailto:jack@diversifiedplus.com?subject='+encodeURIComponent('New project request')+'&body='+encodeURIComponent(body.join('\n'))})});
 
   /* JS 06 — Product/service selector tabs */
   $$('.nav-main-item[data-prodtabmain]').forEach(function(tab){tab.setAttribute('role','button');tab.setAttribute('tabindex','0');function go(){var key=tab.getAttribute('data-prodtabmain');$$('.nav-main-item[data-prodtabmain]').forEach(function(t){t.classList.remove('nav-active')});tab.classList.add('nav-active');$$('.prod-selector-tab-main').forEach(function(panel){panel.classList.toggle('tab-active',panel.classList.contains('prod-selector-tab-main-'+key))})}tab.addEventListener('click',go);tab.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
@@ -1726,7 +1726,7 @@ try {
     });
     document.querySelectorAll('.dp-services-mega-card,.dp-news-mega-card,.dp-services-mega-item,.dp-news-mega-item').forEach(function(card){
       card.style.backgroundColor = '#FFFFFF';
-      card.style.color = '#0e3043';
+      card.style.color = '#002949';
     });
   }
   ready(function(){
@@ -3039,7 +3039,7 @@ try {
 (function(){
   function stabilizeNavBars(){
     document.querySelectorAll('.section-nav .sm-bugme, .section-nav .sm-bugme .container-fluid').forEach(function(el){
-      el.style.backgroundColor = '#0e3043';
+      el.style.backgroundColor = '#002949';
       el.style.color = '#FFFFFF';
       el.style.opacity = '1';
       el.style.visibility = 'visible';
@@ -3055,11 +3055,11 @@ try {
       el.style.height = 'auto';
       el.style.minHeight = '34px';
       el.style.backgroundColor = '#FFFFFF';
-      el.style.color = '#0e3043';
+      el.style.color = '#002949';
     });
     if(document.body.classList.contains('dp-nav-scrolled')){
       document.querySelectorAll('#menu-main-nav > li > a, #menu-main-nav > li > button, #menu-main-nav > li > .dp-services-mega-trigger, #menu-main-nav > li > .dp-news-mega-trigger').forEach(function(el){
-        el.style.color = '#0e3043';
+        el.style.color = '#002949';
       });
     }
   }
@@ -3294,14 +3294,14 @@ try {
 
   function applyFinalDrawerTheme(drawer){
     if(!drawer) return;
-    drawer.style.background = '#0e3043';
+    drawer.style.background = '#002949';
     drawer.style.color = '#FFFFFF';
     drawer.style.borderLeft = '1px solid rgba(255,255,255,.1)';
     drawer.style.boxShadow = '-24px 0 60px rgba(0,0,0,.34)';
 
     var head = qs('.dp-mobile-final-head', drawer);
     if(head){
-      head.style.background = '#13384c';
+      head.style.background = '#002949';
       head.style.borderBottom = '1px solid rgba(255,255,255,.12)';
     }
 
@@ -3382,7 +3382,7 @@ try {
       el.style.margin = '0';
       el.style.padding = '0 18px';
       el.style.background = '#FFFFFF';
-      el.style.color = '#0e3043';
+      el.style.color = '#002949';
       el.style.border = '1px solid #FFFFFF';
       el.style.borderRadius = '0';
       el.style.boxShadow = 'none';

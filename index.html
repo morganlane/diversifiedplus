@@ -1,16 +1,4 @@
 
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-
 <html class="crjs" itemscope="" itemtype="http://schema.org/WebPage" lang="en-US" style="--wm-toolbar-height: 1px;">
 <head><link href="https://images.unsplash.com" rel="preconnect"/><link href="assets/css/diversified-plus-organized.css" rel="stylesheet"/>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
@@ -51,11 +39,11 @@
 </div>
 <div class="mm-page mm-slideout" id="mm-0">
 <div class="site d-block w-100" id="page">
-<a class="skip-link screen-reader-text sr-only" href="services.html">
+<a class="skip-link screen-reader-text sr-only" href="#main-content">
      Skip to content
     </a>
 <header class="section-nav d-block" id="site-header">
-<div class="sm-bugme" style="background:#0e3043;"><div class="container-fluid">Diversified Plus Goes Green |
+<div class="sm-bugme" style="background:#002949;"><div class="container-fluid">Diversified Plus Goes Green |
 <a href="diversified-plus-goes-green.html">Learn More</a></div></div>
 <div class="dp-top-nav-secondary-bar">
 <div class="top-nav-wrapper">
@@ -72,7 +60,7 @@
 <div class="row">
 <div class="col p-0">
 <div class="header-wrapper">
-<a class="logo dp-logo-wordmark" href="index.html" rel="home" title="Diversified Plus Construction"><img alt="Diversified Plus Construction Services" decoding="async" loading="eager" src="assets/images/dp-logo-wordmark.svg"/></a>
+<a class="logo dp-logo-wordmark" href="index.html" rel="home" title="Diversified Plus Construction"><img alt="Diversified Plus Construction Services" decoding="async" height="118" loading="eager" src="assets/images/dp-logo-wordmark.svg" width="540"/></a>
 <div class="links-wrapper">
 <div class="navs-wrapper d-none d-md-block">
 <div class="main-nav-wrapper d-none d-xl-flex">
@@ -126,16 +114,21 @@
 </div>
 </div>
 </header>
+<main id="main-content" role="main">
 <div class="section-hero d-block" id="hero">
+<div class="video-wrapper">
+<div class="video-overlay">
+</div>
+<video autoplay="" loop="" muted="" playsinline="" poster="assets/images/diversified-plus-projects/kitchens/kit-1.jpg" preload="metadata">
+<source src="https://assets.mixkit.co/videos/43033/43033-1080.mp4" type="video/mp4"/>
+<source src="https://assets.mixkit.co/videos/43033/43033-720.mp4" type="video/mp4"/>
+</video>
+</div>
 <div class="hero-wrapper">
 <div class="hero-text">
-<div class="title">
-       Building Relationships
-        <br/>
-        through Honest
-        <br/>
-        Contracting
-       </div>
+<h1 class="title">
+       Your Home Deserves Better
+       </h1>
 <div class="text">
         We will breathe new life into your bathroom, transform your kitchen, and help you fall in love with your home all over again.
        </div>
@@ -157,43 +150,45 @@
 <div class="main dp-hero-quote-heading">Request a Project Consultation</div>
 <div class="subtext dp-hero-quote-subtext">Tell us what you are planning. Our team will follow up with the next step.</div>
 </div>
-<form accept-charset="UTF-8" action="#" autocomplete="on" class="form dp-hero-quote-form dp-renovation-consultation-form" data-hero-quote-form="true" id="consultation" method="post" novalidate="">
+<form accept-charset="UTF-8" action="#" autocomplete="off" class="form dp-hero-quote-form dp-renovation-consultation-form" data-hero-quote-form="true" id="consultation" method="post" novalidate="">
 <div class="dp-hero-quote-grid">
 <div class="dp-hero-field">
 <label for="hero-full-name">Full Name</label>
-<input class="form-control" id="hero-full-name" name="full_name" placeholder="Your name" required="" type="text"/>
+<input autocomplete="name" class="form-control" id="hero-full-name" name="full_name" placeholder="Your name…" required="" type="text"/>
 </div>
 <div class="dp-hero-field">
 <label for="hero-email">Email Address</label>
-<input class="form-control" id="hero-email" name="email" placeholder="you@example.com" required="" type="email"/>
+<input autocomplete="email" class="form-control" id="hero-email" name="email" placeholder="you@example.com…" required="" spellcheck="false" type="email"/>
 </div>
 <div class="dp-hero-field">
 <label for="hero-phone">Phone Number</label>
-<input class="form-control phone_us" id="hero-phone" name="phone" placeholder="914.879.0442" required="" type="tel"/>
+<input autocomplete="tel" class="form-control phone_us" id="hero-phone" inputmode="tel" name="phone" placeholder="914.879.0442…" required="" type="tel"/>
 </div>
 <div class="dp-hero-field">
 <label for="hero-location">Project Location / Town</label>
-<input class="form-control" id="hero-location" name="project_location" placeholder="Westchester, Putnam, or Southern CT" type="text"/>
+<input autocomplete="address-level2" class="form-control" id="hero-location" name="project_location" placeholder="Westchester, Putnam, or Southern CT…" type="text"/>
 </div>
 <div class="dp-hero-field">
-<label for="hero-project-type">Project Type</label>
-<select class="form-control" id="hero-project-type" name="project_type" required="">
-<option value="">Select a project type</option>
-<option value="Kitchen Renovation">Kitchen Renovation</option>
+<label for="hero-project-type">Service Focus</label>
+<select class="form-control" id="hero-project-type" name="project_type_selector">
+<option value="">Select a service focus</option>
+<option value="Kitchen Remodeling">Kitchen Remodeling</option>
 <option value="Bathroom Renovation">Bathroom Renovation</option>
-<option value="Basement Finishing">Basement Finishing</option>
+<option value="Interior Renovation">Interior Renovation</option>
 <option value="Home Addition">Home Addition</option>
 <option value="Deck / Porch">Deck / Porch</option>
+<option value="Outdoor Living">Outdoor Living</option>
 <option value="Siding / Exterior">Siding / Exterior</option>
 <option value="Roofing">Roofing</option>
-<option value="New Construction">New Construction</option>
+<option value="Carpentry / Millwork">Carpentry / Millwork</option>
 <option value="Architectural / Permit Support">Architectural / Permit Support</option>
+<option value="New Construction">New Construction</option>
 <option value="Not Sure Yet">Not Sure Yet</option>
 </select>
 </div>
 <div class="dp-hero-field">
 <label for="hero-timeline">Ideal Timeline</label>
-<select class="form-control" id="hero-timeline" name="timeline">
+<select autocomplete="off" class="form-control" id="hero-timeline" name="timeline">
 <option value="">Select timing</option>
 <option value="As soon as possible">As soon as possible</option>
 <option value="1-3 months">1–3 months</option>
@@ -205,8 +200,37 @@
 </div>
 <div class="dp-hero-field dp-hero-field-full">
 <label for="hero-message">Message / Project Notes</label>
-<textarea class="form-control" id="hero-message" name="message" placeholder="Tell us what you are planning." rows="3"></textarea>
+<textarea autocomplete="off" class="form-control" id="hero-message" name="message" placeholder="Tell us what you are planning…" rows="3"></textarea>
 </div>
+<fieldset class="dp-hero-interest-wrap">
+<legend class="dp-hero-interest-title">Project Type</legend>
+<div class="dp-hero-interest-grid">
+<label>
+<input name="project_type" required="" type="radio" value="Kitchen Remodeling"/>
+<span>Kitchen Remodeling</span>
+</label>
+<label>
+<input name="project_type" type="radio" value="Bathroom Renovation"/>
+<span>Bathroom Renovation</span>
+</label>
+<label>
+<input name="project_type" type="radio" value="Interior Renovation"/>
+<span>Interior Renovation</span>
+</label>
+<label>
+<input name="project_type" type="radio" value="Home Addition"/>
+<span>Home Addition</span>
+</label>
+<label>
+<input name="project_type" type="radio" value="Deck / Porch"/>
+<span>Decking &amp; Porches</span>
+</label>
+<label>
+<input name="project_type" type="radio" value="Siding / Exterior"/>
+<span>Siding &amp; Exteriors</span>
+</label>
+</div>
+</fieldset>
 <div class="form-group form-submit dp-hero-submit-row">
 <button class="dp-btn dp-btn--primary btn btn-primary center-button dp-hero-submit" name="saveForm" type="submit">
 <span>Submit Request</span>
@@ -215,6 +239,7 @@
 </div>
 <div aria-live="polite" class="dp-hero-form-message" data-hero-form-message=""></div>
 </form>
+</div>
 </div>
 </div>
 <div class="anchor-menu">
@@ -261,42 +286,45 @@
 </a>
 </div>
 </div>
-<div class="video-wrapper">
-<div class="video-overlay">
-</div>
-<video autoplay="" loop="" muted="" playsinline="" preload="metadata" style="background-image:url('https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&amp;fit=crop&amp;w=1200&amp;q=80')">
-<source src="https://web.archive.org/web/20200920000245im_/https://www.reborncabinets.com/wp-content/themes/reborn-home-solutions/videos/home.mp4"/>
-</video>
-</div>
-</div>
-</div><div class="section-home-intro layout-parallax d-block" id="company-intro">
-<img alt="Diversified Plus construction professional working on a residential roof" class="illustration left-bottom lazyloaded img-fluid" data-dp-image-filled="true" decoding="async" loading="lazy" src="assets/images/diversified-project-photos/man_working_on_roof_transparent.png" style="width:600px;height:300px;"/>
-<img alt="Diversified Plus construction team reviewing a residential project" class="illustration right-top lazyloaded img-fluid" data-dp-image-filled="true" decoding="async" loading="lazy" src="assets/images/diversified-project-photos/two-men-staring.png" style="width:600px;height:300px;"/>
-<div class="container-fluid">
-<div class="row justify-content-center">
-<div class="col-10 p-0">
-<div class="content-container">
-<div class="image-wrapper">
-<div class="bg-image lazyloaded" data-bg="https://diversifiedplus.com/images/popupsbig/siding1.jpg" style="background-image:url('https://diversifiedplus.com/images/popupsbig/siding1.jpg');">
+</div><section class="section-home-intro dp-home-manifesto d-block" id="company-intro">
+<div class="dp-home-manifesto-shell">
+<div class="dp-home-manifesto-grid">
+<div class="dp-home-manifesto-copy">
+<p class="dp-home-manifesto-eyebrow">Diversified Plus Construction</p>
+<h2>Full-service residential contracting built around clarity, craftsmanship, and long-term trust.</h2>
+<p>Diversified Plus leads additions, renovations, kitchens, baths, decking, siding, and exterior construction with one accountable team guiding scope, sequencing, materials, and finish quality from the first conversation through the final walkthrough.</p>
+<div class="dp-home-manifesto-actions">
+<a class="btn btn-primary center-button" href="services.html">Explore Services</a>
+<a class="btn btn-secondary center-button" href="projects.html">View Projects</a>
 </div>
 </div>
-<div class="content-wrapper parallax-item">
-<div class="text-wrapper">
-<h1 class="text-uppercase">Full-Service Contracting, Renovations &amp; Construction</h1>
-<p>Diversified Plus Construction is the only full-service contractor you will ever need to oversee and complete residential and commercial projects. The company specializes in all phases of carpentry, construction, kitchens, baths, additions, decking, siding, and affiliated building products.</p>
-<div class="button-group">
-<a class="btn btn-primary center-button" href="services.html">
-             How Can We Help?
-            </a>
+<div class="dp-home-manifesto-media">
+<div class="dp-home-manifesto-image" data-dp-image-filled="true" style="background-image:url('assets/images/diversified-plus-projects/service_feature_images/house-01.jpg'); background-size:cover; background-position:center;"></div>
+<div class="dp-home-manifesto-badge">
+<strong>One team, full scope</strong>
+<span>Planning, structural coordination, finish work, and exterior execution aligned under one contractor.</span>
 </div>
 </div>
 </div>
+<div class="dp-home-manifesto-points">
+<article class="dp-home-manifesto-point">
+<span>01</span>
+<h3>Owner-led project direction</h3>
+<p>Clients get a direct, practical construction path instead of fragmented handoffs between trades and consultants.</p>
+</article>
+<article class="dp-home-manifesto-point">
+<span>02</span>
+<h3>Interior and exterior fluency</h3>
+<p>The work stays cohesive because kitchens, additions, siding, decks, roofing, and finish details are treated as one system.</p>
+</article>
+<article class="dp-home-manifesto-point">
+<span>03</span>
+<h3>Built for Westchester living</h3>
+<p>Projects are shaped around real homes, local permitting realities, property constraints, and long-term material performance.</p>
+</article>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div><div class="section-prod-selector prod-selector-main bg-gray" id="products">
+</section><div class="section-prod-selector prod-selector-main bg-gray" id="products">
 <div class="wrapper-section-prod-selector">
 <div aria-label="Diversified Plus service categories" class="prod-selector-nav-main">
 <div class="nav-main-item nav-active" data-prodtabmain="1">
@@ -807,9 +835,7 @@
 </div>
 </div>
 <div class="dp-scroll-anchor" id="thumbnails-all"></div><div class="section-gallery gallery-tabs d-block" id="gallery">
-<div class="container-fluid">
-<div class="row justify-content-center">
-<div class="col-10 p-0">
+<div class="dp-gallery-shell">
 <div class="header-content">
 <div class="dp-gallery-head-intro">
 <div class="dp-gallery-head-copy">
@@ -843,11 +869,6 @@
 <li>
 <a data-gallery-filter="doors" data-toggle="tab" href="#gallery" role="button">
              Siding
-            </a>
-</li>
-<li>
-<a data-gallery-filter="remodeling" data-toggle="tab" href="#gallery" role="button">
-             Renovations
             </a>
 </li>
 <li>
@@ -896,164 +917,34 @@
              Renovations
             </a>
 </li>
-<li>
-<a data-gallery-filter="remodeling" data-toggle="tab" href="#gallery" role="button">
-             Renovations
-            </a>
-</li>
 </ul>
 </div>
 </div>
 <div class="gallery-content">
-<div class="tab-content">
-<div class="tab-pane fade in active show" id="thumbnails-cabinetry">
-<div class="row">
-<div class="col-6">
-<div class="row">
-<div class="col-12">
-<a class="custom-lightbox lazyload" data-bg="assets/images/diversified-plus-projects/exterior_renovations/home-renovation-photo-westchester-putnam-southern-connecticut-01.png" data-caption="Kitchen Reface - Soft Gray Transitional" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/58ccdba3d9e56ef7cc77b6a78ff45357/3a4277ed" style="background-image:url('assets/images/diversified-plus-projects/exterior_renovations/home-renovation-photo-westchester-putnam-southern-connecticut-01.png'); background-size:cover; background-position:center;">
-<span class="overlay">
-<i class="fal fa-expand-arrows">
-</i>
-<span>
-                  Expand
-                 </span>
-</span>
-<span class="like-toggle">
-<i class="fas fa-heart">
-</i>
-<i class="fas fa-heart-circle">
-</i>
-</span>
-</a>
-</div>
-<div class="col-12 col-lg-6">
-<a class="custom-lightbox lazyload" data-bg="assets/images/diversified-plus-projects/additions_renovations/add-10.jpg" data-caption="Kitchen Reface - Turquoise Modern" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all bathroom cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/f7c21d58627830fa8339583d698d4e66/0219a6c4" style="background-image:url('assets/images/diversified-plus-projects/additions_renovations/add-10.jpg'); background-size:cover; background-position:center;">
-<span class="overlay">
-<i class="fal fa-expand-arrows">
-</i>
-<span>
-                  Expand
-                 </span>
-</span>
-<span class="like-toggle">
-<i class="fas fa-heart">
-</i>
-<i class="fas fa-heart-circle">
-</i>
-</span>
-</a>
-</div>
-<div class="col-12 col-lg-6">
-<a class="custom-lightbox lazyload" data-bg="assets/images/diversified-plus-projects/siding/croton-after-small.jpg" data-caption="Kitchen Remodel - Italian Walnut Thermofoil " data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry remodeling windows" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/9281fd3300391a32d539fd86a0669547/b08f7ee1" style="background-image:url('assets/images/diversified-plus-projects/siding/croton-after-small.jpg'); background-size:cover; background-position:center;">
-<span class="overlay">
-<i class="fal fa-expand-arrows">
-</i>
-<span>
-                  Expand
-                 </span>
-</span>
-<span class="like-toggle">
-<i class="fas fa-heart">
-</i>
-<i class="fas fa-heart-circle">
-</i>
-</span>
-</a>
+<div class="dp-gallery-mosaic" id="thumbnails-cabinetry">
+<a class="custom-lightbox dp-gallery-mosaic-item dp-gallery-mosaic-item--top-left" data-bg="assets/images/diversified-plus-projects/kitchens/kit-1.jpg" data-caption="Kitchen Remodeling Project" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all bathroom cabinetry" data-product="cabinetry" href="assets/images/diversified-plus-projects/kitchens/kit-1.jpg" style="background-image:url('assets/images/diversified-plus-projects/kitchens/kit-1.jpg');"></a>
+<a class="custom-lightbox dp-gallery-mosaic-item dp-gallery-mosaic-item--top-mid-left" data-bg="assets/images/diversified-plus-projects/baths/bath-1.jpg" data-caption="Bathroom Renovation Project" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all bathroom remodeling" data-product="bathroom" href="assets/images/diversified-plus-projects/baths/bath-1.jpg" style="background-image:url('assets/images/diversified-plus-projects/baths/bath-1.jpg');"></a>
+<a class="custom-lightbox dp-gallery-mosaic-item dp-gallery-mosaic-item--center-tall" data-bg="assets/images/diversified-plus-projects/full_interior_renovations/full-interior-renovation-open-concept-living-kitchen-westchester-putnam-southern-connecticut-01.jpeg" data-caption="Full Interior Renovation" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all remodeling" data-product="remodeling" href="assets/images/diversified-plus-projects/full_interior_renovations/full-interior-renovation-open-concept-living-kitchen-westchester-putnam-southern-connecticut-01.jpeg" style="background-image:url('assets/images/diversified-plus-projects/full_interior_renovations/full-interior-renovation-open-concept-living-kitchen-westchester-putnam-southern-connecticut-01.jpeg');"></a>
+<a class="custom-lightbox dp-gallery-mosaic-item dp-gallery-mosaic-item--top-mid-right" data-bg="assets/images/diversified-plus-projects/additions_renovations/add-1.jpg" data-caption="Home Addition Project" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry additions" data-product="cabinetry" href="assets/images/diversified-plus-projects/additions_renovations/add-1.jpg" style="background-image:url('assets/images/diversified-plus-projects/additions_renovations/add-1.jpg');"></a>
+<a class="custom-lightbox dp-gallery-mosaic-item dp-gallery-mosaic-item--top-right" data-bg="assets/images/diversified-plus-projects/siding/siding-1.jpg" data-caption="Siding and Exterior Project" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all doors" data-product="doors" href="assets/images/diversified-plus-projects/siding/siding-1.jpg" style="background-image:url('assets/images/diversified-plus-projects/siding/siding-1.jpg');"></a>
+
+<div class="dp-gallery-mosaic-card dp-gallery-mosaic-card--info">
+<div class="dp-gallery-mosaic-card-inner">
+<p>Browse completed additions, kitchens, baths, renovation work, decking, and exterior upgrades across the Diversified Plus portfolio. Every image highlights the real scale, material quality, and finish work our team delivers.</p>
 </div>
 </div>
-</div>
-<div class="col-6">
-<div class="row">
-<div class="col-12 col-lg-6">
-<a class="custom-lightbox lazyload" data-bg="assets/images/diversified-plus-projects/service_feature_images/kitchen.jpg" data-caption="Kitchen Reface - White Shaker KFI Gary Hoffmann" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry doors" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/75af68b9ebc5e78fa0535e538d13a407/340164df" style="background-image:url('assets/images/diversified-plus-projects/service_feature_images/kitchen.jpg'); background-size:cover; background-position:center;">
-<span class="overlay">
-<i class="fal fa-expand-arrows">
-</i>
-<span>
-                  Expand
-                 </span>
-</span>
-<span class="like-toggle">
-<i class="fas fa-heart">
-</i>
-<i class="fas fa-heart-circle">
-</i>
-</span>
-</a>
-</div>
-<div class="col-12 col-lg-6">
-<a class="custom-lightbox lazyload" data-bg="assets/images/diversified-plus-projects/exterior_renovations/home-renovation-photo-westchester-putnam-southern-connecticut-01.png" data-caption="Kitchen Reface - Rustic Oak Thermofoil " data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry remodeling" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/bda35311563297d4bb6d94c4c1535c00/ab17f9ea" style="background-image:url('assets/images/diversified-plus-projects/exterior_renovations/home-renovation-photo-westchester-putnam-southern-connecticut-01.png'); background-size:cover; background-position:center;">
-<span class="overlay">
-<i class="fal fa-expand-arrows">
-</i>
-<span>
-                  Expand
-                 </span>
-</span>
-<span class="like-toggle">
-<i class="fas fa-heart">
-</i>
-<i class="fas fa-heart-circle">
-</i>
-</span>
-</a>
-</div>
-<div class="col-12">
-<a class="custom-lightbox lazyload" data-bg="assets/images/diversified-plus-projects/additions_renovations/add-10.jpg" data-caption="Kitchen Reface - Night Blue" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/820832889cc358afbc7d950d5878c439/61c6cc72" style="background-image:url('assets/images/diversified-plus-projects/additions_renovations/add-10.jpg'); background-size:cover; background-position:center;">
-<span class="overlay">
-<i class="fal fa-expand-arrows">
-</i>
-<span>
-                  Expand
-                 </span>
-</span>
-<span class="like-toggle">
-<i class="fas fa-heart">
-</i>
-<i class="fas fa-heart-circle">
-</i>
-</span>
-</a>
+
+<div class="dp-gallery-mosaic-card dp-gallery-mosaic-card--feature">
+<span class="dp-gallery-mosaic-accent" aria-hidden="true"></span>
+<div class="dp-gallery-mosaic-feature-bg" style="background-image:url('assets/images/diversified-plus-projects/decking/custom-deck-railing-outdoor-living-westchester-putnam-southern-connecticut-01.jpg');"></div>
+<div class="dp-gallery-mosaic-feature-copy">
+<h3>Project Gallery</h3>
+<p>Explore inspiration from full-service remodeling projects completed by Diversified Plus, from kitchen and bath renovations to additions, decks, siding, and whole-home transformations.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="d-none">
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Cloud Thermofoil Honeycomb Splash" data-fancybox="inspiration-gallery" data-gallery-category="all bathroom cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/b42cd14706a649742d3342e53b765eb1/200a1b6d">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Honey Maple Shaker" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry windows" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/38fc501f2f40b6ec4aa52035dc40050b/820dd94b">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Sangria Alder Traditional" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry doors" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/5955da02e192942f3d8ddae21c2730a4/ba970a86">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Brentwood Traditional " data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry remodeling" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/6440b0bae8de42e0b62c461b1be82c7b/15594f9e">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Traditional Satin White " data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/4da9e9ca4dbcfe13c1635618b6f27480/8d3fc996">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Rose White Maple " data-fancybox="inspiration-gallery" data-gallery-category="all bathroom cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/34079f18afb9a3afa208c528d0e80ba9/fde69a66">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Bathroom Reface - Small Espresso Vanity" data-fancybox="inspiration-gallery" data-gallery-category="all bathroom windows" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/07343667b3d2ca2f4ba7b8f51cf969ec/01745ad1">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Espresso and Gallaio Granite " data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry doors" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/813c515e1e2340031ee39a98aa1e9fad/cafeac2d">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Natural Modern " data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry remodeling" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/d2e2692485ac7489f8fc83c698b3ed01/aa94919f">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Linen Traditional " data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/c377a6cf73bd4f667fd5697b81de33bf/07f965b1">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Sangria Alder Traditional" data-fancybox="inspiration-gallery" data-gallery-category="all bathroom cabinetry" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/54058a4251af707c9f39db0cd2dc994c/7e5b193a">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Traditional White &amp; Espresso " data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry windows" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/277e5908f0707c7f19ca6b9bc2f417f8/1209a318">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Bathroom Vanity Reface" data-fancybox="inspiration-gallery" data-gallery-category="all bathroom doors" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/76c926a0c6a7a818fdc0140d7605c476/b17694d1">
-</a>
-<a class="custom-lightbox lazyload" data-caption="Kitchen Reface - Alder Espresso" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry remodeling" data-product="cabinetry" href="https://web.archive.org/web/20210301174055/https://dl.airtable.com/.attachmentThumbnails/b2af7067539c5c7b8b4dad38bb62203f/781c7997">
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<a class="custom-lightbox dp-gallery-mosaic-item dp-gallery-mosaic-item--bottom-left" data-bg="assets/images/diversified-plus-projects/decking/deck-01.jpg" data-caption="Decking and Porch Project" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all windows" data-product="windows" href="assets/images/diversified-plus-projects/decking/deck-01.jpg" style="background-image:url('assets/images/diversified-plus-projects/decking/deck-01.jpg');"></a>
+<a class="custom-lightbox dp-gallery-mosaic-item dp-gallery-mosaic-item--bottom-wide" data-bg="assets/images/diversified-plus-projects/additions_renovations/add-10.jpg" data-caption="Residential Interior and Addition Project" data-dp-image-filled="true" data-fancybox="inspiration-gallery" data-gallery-category="all cabinetry remodeling" data-product="remodeling" href="assets/images/diversified-plus-projects/additions_renovations/add-10.jpg" style="background-image:url('assets/images/diversified-plus-projects/additions_renovations/add-10.jpg');"></a>
 </div>
 <div class="dp-gallery-empty">
       No saved images in this category yet.
@@ -1157,12 +1048,17 @@
 </nav>
 </div>
 </div>
+<div class="dp-home-section-intro">
+<p class="dp-home-section-intro-eyebrow">Service Focus</p>
+<h2>Choose the kind of project you are planning and explore the paths we build most often.</h2>
+<p>Each service track below is organized around the spaces, structural decisions, and finish priorities homeowners typically need to solve first.</p>
+</div>
 <section aria-labelledby="dp-product-logos-title" class="dp-product-logos-band bg-gray">
 <div class="dp-product-logos-inner">
 <p class="dp-product-logos-eyebrow">Decking &amp; Siding Product Partners</p>
 <h2 id="dp-product-logos-title">Trusted Exterior Materials for Better Long-Term Performance</h2>
 <p class="dp-product-logos-copy">Diversified Plus helps homeowners compare durable decking, siding, railing, and exterior product options that fit the project scope, style, and maintenance goals.</p>
-<img alt="Diversified Plus decking and siding partner product logos" class="dp-product-logos-img" decoding="async" loading="eager" src="assets/images/diversified-plus-projects/brand/Decking-Siding_logos2.png"/>
+<img alt="Diversified Plus decking and siding partner product logos" class="dp-product-logos-img" decoding="async" height="47" loading="eager" src="assets/images/diversified-plus-projects/brand/Decking-Siding_logos2.png" width="500"/>
 </div>
 </section>
 <section aria-labelledby="dp-home-services-insights-title" class="dp-home-services-insights">
@@ -1177,7 +1073,7 @@
 <div aria-label="Homepage planning resources" class="dp-home-services-insights-grid">
 <article class="dp-home-services-insight-card">
 <a aria-label="Read the planning insight" class="dp-home-services-insight-image" href="blog-design-consultation-process.html">
-<img alt="Diversified Plus planning resource" decoding="async" loading="lazy" src="assets/images/diversified-plus-projects/additions_renovations/home-addition-garage-entry-remodel-westchester-putnam-southern-connecticut-01.jpeg"/>
+<img alt="Diversified Plus planning resource" decoding="async" height="1237" loading="lazy" src="assets/images/diversified-plus-projects/additions_renovations/home-addition-garage-entry-remodel-westchester-putnam-southern-connecticut-01.jpeg" width="2200"/>
 <span>Planning</span>
 </a>
 <div class="dp-home-services-insight-body">
@@ -1189,7 +1085,7 @@
 </article>
 <article class="dp-home-services-insight-card">
 <a aria-label="Read the coordination insight" class="dp-home-services-insight-image" href="architectural-permit-assistance.html">
-<img alt="Diversified Plus construction coordination resource" decoding="async" loading="lazy" src="assets/images/diversified-plus-projects/additions_renovations/add-4.jpg"/>
+<img alt="Diversified Plus construction coordination resource" decoding="async" height="1024" loading="lazy" src="assets/images/diversified-plus-projects/additions_renovations/add-4.jpg" width="1536"/>
 <span>Structure</span>
 </a>
 <div class="dp-home-services-insight-body">
@@ -1201,7 +1097,7 @@
 </article>
 <article class="dp-home-services-insight-card">
 <a aria-label="View related completed project thinking" class="dp-home-services-insight-image" href="projects.html">
-<img alt="Diversified Plus finished project resource" decoding="async" loading="lazy" src="assets/images/diversified-plus-projects/additions_renovations/add-3.jpg"/>
+<img alt="Diversified Plus finished project resource" decoding="async" height="1024" loading="lazy" src="assets/images/diversified-plus-projects/additions_renovations/add-3.jpg" width="1536"/>
 <span>Finish</span>
 </a>
 <div class="dp-home-services-insight-body">
@@ -1227,12 +1123,13 @@
 </div>
 </div>
 </section>
+</main>
 <footer aria-label="Diversified Plus footer" class="dp-scarsdale-footer" id="footer">
 <div class="dp-rbf-shell">
 <div class="dp-rbf-top">
 <div class="dp-rbf-brand-block">
 <a class="logo dp-logo-wordmark dp-rbf-logo" href="index.html" rel="home" title="Diversified Plus Construction">
-<img alt="Diversified Plus Construction Services" decoding="async" loading="eager" src="assets/images/dp-logo-wordmark.svg"/>
+<img alt="Diversified Plus Construction Services" decoding="async" height="118" loading="eager" src="assets/images/dp-logo-wordmark.svg" width="540"/>
 </a>
 <p>Full-service residential remodeling, additions, kitchens, baths, decking, siding, and exterior construction across Westchester, Putnam, and southern Connecticut.</p>
 <div aria-label="Company highlights" class="dp-rbf-proof">
@@ -3750,7 +3647,7 @@ Purpose:
     });
     document.querySelectorAll('.dp-services-mega-card,.dp-news-mega-card,.dp-services-mega-item,.dp-news-mega-item').forEach(function(card){
       card.style.backgroundColor = '#FFFFFF';
-      card.style.color = '#0e3043';
+      card.style.color = '#002949';
     });
   }
   ready(function(){
@@ -4130,7 +4027,7 @@ Purpose:
     if(!drawer) return;
 
     drawer.classList.add('dp-mobile-final-drawer');
-    drawer.style.background = '#0e3043';
+    drawer.style.background = '#002949';
     drawer.style.color = '#FFFFFF';
     drawer.style.borderLeft = '1px solid rgba(255,255,255,.1)';
     drawer.style.boxShadow = '-24px 0 60px rgba(0,0,0,.34)';
@@ -4138,7 +4035,7 @@ Purpose:
     var head = qs('.rb-mobile-drawer__head', drawer);
     if(head){
       head.classList.add('dp-mobile-final-head');
-      head.style.background = '#13384c';
+      head.style.background = '#002949';
       head.style.borderBottom = '1px solid rgba(255,255,255,.12)';
     }
 
@@ -4258,7 +4155,7 @@ Purpose:
       ctaLink.style.margin = '0';
       ctaLink.style.padding = '0 18px';
       ctaLink.style.background = '#FFFFFF';
-      ctaLink.style.color = '#0e3043';
+      ctaLink.style.color = '#002949';
       ctaLink.style.border = '1px solid #FFFFFF';
       ctaLink.style.borderRadius = '0';
       ctaLink.style.boxShadow = 'none';
